@@ -7,5 +7,5 @@ exports.tasks = connect("tasks");
 
 //Add Function
 exports.addProject = project => connect('projects').insert(project)
-exports.addRecource = recource => connect("projects").insert(recource);
-exports.addTask = task => connect("projects").insert(task);
+exports.addRecource = recource => connect("recources").insert(recource);
+exports.addTask = async task => connect("tasks").insert(task);

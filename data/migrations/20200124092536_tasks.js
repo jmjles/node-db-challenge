@@ -3,7 +3,7 @@ exports.up = async knex => {
     tbl.increments("task_ID");
     tbl.string("description").notNullable();
     tbl.string("notes");
-    tbl.string("completed").defaultTo("false");
+    tbl.boolean("completed").defaultTo(false);
     tbl
       .integer("project_ID")
       .unsigned()

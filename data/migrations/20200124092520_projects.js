@@ -3,7 +3,7 @@ exports.up = async knex => {
     tbl.increments("project_ID");
     tbl.string("name").notNullable();
     tbl.string("description");
-    tbl.string("completed").defaultTo("false");
+    tbl.boolean("completed").defaultTo(false);
   });
 };
 
