@@ -1,5 +1,5 @@
 const route = require('express').Router()
-
-route.get('/',(req,res)=> res.send('We are in'))
+const {projects} = require('../../data/knexfunctions')
+route.get('/',async (req,res)=> res.json(await projects))
 
 module.exports = route
